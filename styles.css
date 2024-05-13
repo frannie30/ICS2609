@@ -1,210 +1,227 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-    --bg-color: #f6f8fa;
-    --text-color: #1d1f27;
-    --main-color: #3a3dbe; }
-
-    body {
-        padding: 2rem;
-        font-family: "Poppins", sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-  
-  
-  .sidenav a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #818181;
-    display: block;
-  }
-  
-  
-  .main {
-    margin-left: 250px;
-    padding: 20px;
-  }
-  
-  .title {
-    font-size: 24px;
-    color: #f1f1f1;
-    padding: 10px 15px;
-  }
-  
-  .sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #3a3dbe; 
-    overflow-x: hidden;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  --bg-color: #FFFBDA;
+  --text-color: #1d1f27;
+  --main-color: #F3CA52; 
 }
 
-.sidenav a:hover {
-  color: #fff; /* Change color to white on hover */
+body {
+  padding-top: 50px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: #F9B208;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .title {
+  font-size: 24px;
+  padding: 0 15px; /* Add padding to center title */
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.navbar .links a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .logout {
-    margin-top: auto; 
-    display: flex;
-    justify-content: center; 
+  display: flex;
+  align-items: center;
 }
 
 .logout input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #fff;
-    color: var(--main-color);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px; /* adjusted */
+  background-color: #fff;
+  color: var(--main-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .logout input[type="submit"]:hover {
-    background-color: grey;
+  background-color: grey;
 }
 
+.main {
+  margin-top: 70px; /* adjust for the height of the navbar */
+  padding: 20px;
+}
 
+.title {
+  font-size: 24px;
+  color: #f1f1f1;
+  padding: 10px 15px;
+}
 
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  
-  h3,
-  header,
-  ul {
-    margin-bottom: 0.5rem;
-  }
-  
-  main {
-    max-width: 400px;
-    margin: 1rem auto;
-    background-color: #fff;
-    padding: 1rem;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  header {
-    background-color: var(--main-color);
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  header div {
-    padding: 5px;
-  }
-  
-  header div:first-child {
-    flex-basis: 100%;
-    font-size: 2.25rem;
-    font-weight: 600;
-  }
-  
-  header div:nth-child(n + 2) {
-    flex-basis: 50%;
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-  
-  header h5 {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
+.logout {
+  display: flex;
+  align-items: center;
+}
+
+.logout input[type="submit"] {
+  padding: 10px 15px;
+  background-color: #fff;
+  color: var(--main-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout input[type="submit"]:hover {
+  background-color: grey;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 h1 {
-    text-align: center;
-    font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h3,
+header,
+ul {
+  margin-bottom: 0.5rem;
+}
+
+main {
+  max-width: 400px;
+  margin: 1rem auto;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header div {
+  padding: 5px;
+}
+
+header div:first-child {
+  flex-basis: 100%;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+header div:nth-child(n + 2) {
+  flex-basis: 50%;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+header h5 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 form {
-    max-width: 400px;
-    margin: 1rem auto;
-    background-color: #fff;
-    border-radius: 5px;
+  max-width: 400px;
+  margin: 1rem auto;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 form label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 form input[type="number"],
 form input[type="date"],
 form select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .transaction-form {
-    max-width: 400px;
-    margin: 1rem auto;
-    background-color: #fff;
-    padding: 1rem;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  max-width: 400px;
+  margin: 1rem auto;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .transaction-form label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .transaction-form input[type="number"],
 .transaction-form input[type="date"],
 .transaction-form select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .transaction-form input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--main-color);
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .transaction-form input[type="submit"]:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }

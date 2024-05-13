@@ -39,8 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Check if it's a withdrawal and amount is greater than income
         if ($type == 'expense' && ($amount > $income || $income == 0)) {
-            // Redirect back to index.php with a query parameter to indicate error
-            header('Location: index.php?error=insufficient_funds');
+            // Redirect back to TransactionPage.php with a query parameter to indicate error
+            header('Location: TransactionPage.php?error=insufficient_funds');
             exit;
         }
 
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql_update_balance = "UPDATE users SET income = income - $amount WHERE id = '$userID'";
             }
             if ($conn->query($sql_update_balance) === TRUE) {
-                header('Location: index.php');
+                header('Location: TransactionPage.php');
                 exit;
             } else {
                 echo "Error updating balance: " . $conn->error . "<br>";

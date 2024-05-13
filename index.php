@@ -3,82 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YELLOW PURSE</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-    function validateAmount() {
-        var amount = document.getElementById("amount").value; // Retrieve amount from input field
-        if (amount <= 0 || isNaN(amount)) {
-            alert("Amount must be greater than 0.");
-            return false;
-        }
-        return true;
-    }
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const error = urlParams.get('error');
-
-    // If error is present, display an alert
-    if (error === 'insufficient_funds') {
-        alert('You have insufficient funds for this withdrawal.');
-    }
-
-    window.onload = function() {
-        var currentDate = new Date().toISOString().split('T')[0];
-        document.getElementById("date").value = currentDate;
-    };
-
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
-            window.location.href = 'login.php';
-        }
-    });
-
-
-    
-</script>
+    <title>YELLOW PURSE </title>
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-    <div class="sidenav">
+    <div class="navbar">
         <div class="title">Yellow Purse</div>
-        <a href="index.php">Transaction Page</a>
-        <a href="TransactionHistory.php">Transaction History</a>
-        <form action="logout_process.php" method="post" class="logout">
-            <input type="submit" value="Log out">
-        </form>
+        <div class="links">
+            <a href="login.php">Transaction Page</a>
+            <a href="login.php">Transaction History</a>
+            <form action="login.php" method="get" class="login">
+                <button type="submit">Log in</button>
+            </form>
+            <div class="spacer"></div>
+            <form action="signup.php" method="get" class="signup">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
     </div>
 
-    <div class="main">
-        <h1>TRANSACTIONS</h1>
-        <main>
-            <header>
-                <div>
-                    <h5>Total Balance</h5>
-                    <?php include 'get_balance.php'; ?>
-                </div>
-                <div>
-                    <h5> Deposit</h5>
-                    <?php include 'get_income.php'; ?>
-                </div>
-                <div>
-                    <h5> Withdraw</h5>
-                    <?php include 'get_expense.php'; ?>
-                </div>
-            </header>
-            <form action="add_transaction.php" method="post" class="transaction-form" onsubmit="return validateAmount()">
-                <label for="type">Type:</label>
-                <select name="type" id="type" required>
-                    <option value="income">Deposit</option>
-                    <option value="expense">Withdraw</option>
-                </select><br>
-                <label for="amount">Amount:</label>
-                <input type="number" name="amount" id="amount" required><br>
-                <label for="date">Date:</label>
-                <input type="date" name="date" id="date" required><br>
-                <input type="submit" value="Add Transaction">
-                
-            </form>
-        </main>
+    <div class="content-wrapper">
+        <div class="content">
+            <h1>About Yellow Purse</h1>
+            <p>Introducing Yellow Purse, your go-to online financial management platform. With Yellow Purse, managing your finances becomes convenient and secure. Whether you're tracking expenses, setting budgets, or planning for the future, Yellow Purse provides the tools you need to take control of your financial journey. Join the thousands of users who trust Yellow Purse to help them achieve their financial goals with ease.
+            </p>
+            
+            <h2>Features:</h2>
+            <ul>
+                <li>Transaction Page: Easily make transactions online.</li>
+                <li>Transaction History: Keep track of all your transactions.</li>
+                <li> Login: Log in to your account securely.</li>
+                <li>Sign Up: Create an account to start managing your finances.</li>
+            </ul>
+
+            <h2>Why Choose Yellow Purse?</h2>
+            <p>Yellow Purse provides users with a seamless experience through its intuitive interface, advanced security features, and comprehensive financial management tools, empowering individuals to effectively take control of their finances.
+            </p>
+
+
+        </div>
     </div>
 </body>
 </html>
